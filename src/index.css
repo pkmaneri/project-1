@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* h1{
+  color: blue;
+
+}
+.pagetitle{
+  color: red;
+  text-decoration: underline;
+} */
+
+#topNav{
+  margin: 0px;
+  padding: 18px;
+  background-color: darkslategrey;
+  text-align: center;
+}
+#topNav li{
+  display: inline;
+  padding: 19px;
+}
+#topNav li:hover{
+  background-color: darkviolet;
+  cursor:pointer;
+}
+
+#topNav li a{
+ color: white;
+ text-decoration: none;
+}
+/* #topNav li a:visited{
+background-color: firebrick !important;
+} */
+.container{
+  width: 80%;
+  margin: auto;
+}
