@@ -7,6 +7,7 @@ import ItemList from "./components/Items";
 import MyProduct from "./components/Product";
 import Employee from "./components/Employee";
 import Billing from "./components/Billing";
+import StateOne from "./components/State1";
 function App() {
   return (
     <HashRouter>
@@ -17,6 +18,8 @@ function App() {
         <li ><Link to="/myproduct">Product</Link> </li>
         <li ><Link to="/myemp">Employee</Link> </li>
         <li ><Link to="/mybill">Billing</Link> </li>
+        <li ><Link to="/mystate">State</Link> </li>
+
       </ul>
       <Route exact path="/" component={Dashboard}/>
       <Route exact path="/myuser" component={UserList}/>
@@ -24,6 +27,7 @@ function App() {
       <Route exact path="/myproduct" component={MyProduct}/>
       <Route exact path="/myemp" component={Employee}/>
       <Route exact path="/mybill" component={Billing}/>
+      <Route exact path="/mystate" component={StateOne}/>
 
     </HashRouter>
   );
