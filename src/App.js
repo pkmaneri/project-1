@@ -9,6 +9,7 @@ import Employee from "./components/Employee";
 import Billing from "./components/Billing";
 import StateOne from "./components/State1";
 import stateTwo from "./components/State2";
+import Praveen from "./components/state3";
 function App() {
   return (
     <HashRouter>
@@ -21,6 +22,7 @@ function App() {
         <li ><Link to="/mybill">Billing</Link> </li>
         <li ><Link to="/mystate">State</Link> </li>
         <li ><Link to="/mystatetwo">StateTwo</Link> </li>
+        <li ><Link to="/mystatepraveen">Praveen</Link> </li>
 
 
       </ul>
@@ -32,6 +34,9 @@ function App() {
       <Route exact path="/mybill" component={Billing}/>
       <Route exact path="/mystate" component={StateOne}/>
       <Route exact path="/mystatetwo" component={stateTwo}/>
+      <Route exact path="/mystatepraveen" component={Praveen}/>
+
+
 
 
     </HashRouter>

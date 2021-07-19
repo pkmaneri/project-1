@@ -5,32 +5,37 @@ export default class stateTwo extends Component {
         super();
         this.state = {
             bookList: ["Java", "JavaScript", "React", "Html"],
-            newBook:"",
-            message:""
+            newBook: "",
+            message: ""
         }
     }
-    pickValue=(obj)=>{
-        this.setState({
-            newBook:obj.target.value
-        })
+    // pickValue=(obj)=>{
+    //     this.setState({
+    //         newBook:obj.target.value
+    //     })
+
+    // }
+    pickValue = (e) => {
+        const newBook = e.target.value;
+        this.setState({ newBook })
 
     }
-   
-    save=()=>{
-    //    alert(this.state.newBook)
-    this.setState({
-        bookList:this.state.bookList.concat(this.state.newBook),
-        message: this.state.newBook+"Book Added Successfully",
-        newBook:""
-    })
-    }
-    handleDeleteBook=(id)=>{
-        // alert(id)
-        // var bookName=this.state.bookList
-        this.state.bookList.splice(id,1);//a-b
+
+
+    save = () => {
+        //    alert(this.state.newBook)
         this.setState({
-            bookList:this.state.bookList,//a=a
-            message:"Book Delete Successfully",
+            bookList: this.state.bookList.concat(this.state.newBook),
+            message: this.state.newBook + "Book Added Successfully",
+            newBook: ""
+        })
+    }
+    handleDeleteBook = (id) => {
+        // alert(id)
+        this.state.bookList.splice(id, 1);//a-b
+        this.setState({
+            bookList: this.state.bookList,//a=a
+            message: "Book Delete Successfully",
 
         })
 
@@ -42,7 +47,7 @@ export default class stateTwo extends Component {
                 <h1 align="center">Total Book:{this.state.bookList.length}</h1>
                 <p align="center">
                     Enter Book Name:<input type="text"
-                     onChange={this.pickValue} value={this.state.newBook}/>
+                        onChange={this.pickValue} value={this.state.newBook} />
                     <button onClick={this.save}>Save Book</button>
                 </p>
                 <p align="center">{this.state.message}</p>
@@ -61,8 +66,8 @@ export default class stateTwo extends Component {
                                     <td>{index} </td>
                                     <td>{bookName} </td>
                                     <td>
-                                        <button onClick={this.handleDeleteBook.bind(this,index)}>Delete</button>
-                                         </td>
+                                        <button onClick={this.handleDeleteBook.bind(this, index)}>Delete</button>
+                                    </td>
                                 </tr>
                             )
                         })}
